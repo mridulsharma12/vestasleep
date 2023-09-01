@@ -383,7 +383,6 @@ class Authentication extends RestController
 
     public function updatePersonalDetails_post()
     {
-
         $input = $this->input->post();
 
         $age =     "";

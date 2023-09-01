@@ -20,7 +20,7 @@ class AuthModel extends CI_Model
             $id            =     $this->input->get_request_header('id', TRUE);
             $session_key        =     $this->input->get_request_header('session_key', TRUE);
             if ($this->AuthModel->checkSession(array('id' => $id, 'session_key' => $session_key)) != 200) {
-                return array('status' => 401, 'message' =>  'Unauthorized', 'method' => $this->method);
+                return array('status' => 401, 'message' =>  'Unauthorized');
             } else {
                 return array('status' => 200, 'data' => array('id' => $id, 'session_key' => $session_key));
             }
